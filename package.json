@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "./node_modules/.bin/pm2 startOrGracefulReload pm2.json",
+    "start": "./node_modules/.bin/pm2 startOrGracefulReload pm2.json"
   },
   "repository": {
     "type": "git",
