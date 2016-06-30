@@ -18,6 +18,8 @@
   "homepage": "https://github.com/SunPeter/aws#readme",
   "dependencies": {
     "koa": "^1.2.0",
+    "koa-handlebars": "^0.5.7",
+    "koa-static": "^2.0.0",
     "pm2": "^1.1.3",
     "trie-koa-router": "^1.1.1"
   }

@@ -28,7 +28,7 @@
     "out_file"           : "/var/aws/out.log",
     "pid_file"           : "/var/aws/aws.pid",
     "watch"              : false
-  },{
+  }, {
     "name"               : "script",
     "script"             : "script.js",
     "env": {
@@ -39,7 +39,7 @@
     "exec_interpreter"   : "node",
     "node_args"          : "--harmony",
     "exec_mode"          : "cluster_mode",
-    "cron_restart"       : "* * * * * *",
+    "cron_restart"       : "* 1 * * * *",
     "instances"          : 1,
     "log_date_format"    : "YYYY-MM-DD HH:mm Z",
     "max_memory_restart" : "100M",
