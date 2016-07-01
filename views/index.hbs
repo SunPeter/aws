@@ -55,11 +55,11 @@
 <body>
     <div class="wrap">
     	<div class="page page1">
-    		<video class="video-box" id="videoIndex1" x-webkit-airplay="true" webkit-playsinline="true" preload="auto" autoplay src="http://7xj9ez.com1.z0.glb.clouddn.com/1.mp4" ></video>
+    		<video class="video-box" id="videoIndex1" x-webkit-airplay="true" webkit-playsinline="true" preload="auto" autoplay src="http://7xj9ez.com1.z0.glb.clouddn.com/5.mp4" ></video>
     		<div class="page1-con page-con" id="kiss"></div>
     	</div>
     	<div class="page page2">
-    		<video class="video-box" id="videoIndex2" x-webkit-airplay="true" webkit-playsinline="true" preload="auto"  src="http://7xj9ez.com1.z0.glb.clouddn.com/2.mp4" ></video>
+    		<video class="video-box" id="videoIndex2" x-webkit-airplay="true" webkit-playsinline="true" preload="auto" autoplay  src="http://7xj9ez.com1.z0.glb.clouddn.com/2.mp4" ></video>
     	</div>
 	</div>
 </body>
@@ -69,6 +69,9 @@
 		return document.querySelector(selector);
 	};
 	var v1 = query("#videoIndex1"),v2 = query("#videoIndex2"), kiss = $("#kiss");
+	setTimeout(function(){
+		v2.pause();
+	},100);
 	v1.addEventListener("ended",function(e) {
 		$(".page1").addClass("done");
 	});
