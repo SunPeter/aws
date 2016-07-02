@@ -55,7 +55,7 @@
 <body>
     <div class="wrap">
     	<div class="page page1">
-    		<video class="video-box" id="videoIndex1" x-webkit-airplay="true" webkit-playsinline="true" preload="auto" autoplay src="http://7xj9ez.com1.z0.glb.clouddn.com/5.mp4" ></video>
+    		<video class="video-box" id="videoIndex1" x-webkit-airplay="true" webkit-playsinline="true" preload="auto" autoplay src="http://7xj9ez.com1.z0.glb.clouddn.com/5.mp4" controls="controls"></video>
     		<div class="page1-con page-con" id="kiss"></div>
     	</div>
     	<div class="page page2">
@@ -81,7 +81,7 @@
 	function setKissStyle() {
 		screen_width = document.documentElement.clientWidth,
 		screen_height = document.documentElement.clientHeight;
-		if (screen_width / screen_height > ratio) {
+		if (screen_width / screen_height > 1.7) {
 			kiss.css({
 				"height": "100%",
 				"width": ratio * screen_height + "px"
