@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-    <title>ideaology</title>
+    <title>ideaology 世糟广</title>
     <style>
     *{ margin: 0; padding: 0}
 	body, button, input, select, textarea { font: 12px/1.5 "黑体";}
@@ -18,7 +18,7 @@
 	.wrap{width: 100%; overflow-x:hidden}
 	.fl{float: left }
 	.fr{float: right }
-	.page-con {
+    .page-con {
 		width: 100%;
 	    height: 100%;
 	    background-color: black;
@@ -50,64 +50,143 @@
 		display: block;
 	}
     </style>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 </head>
 
 <body>
     <div class="wrap">
     	<div class="page page1">
-    		<video class="video-box" id="videoIndex1" x-webkit-airplay="true" webkit-playsinline="true" preload="auto" autoplay src="http://7xj9ez.com1.z0.glb.clouddn.com/5.mp4"></video>
+    		<video class="video-box" id="videoIndex1" x-webkit-airplay="true" webkit-playsinline="true" preload="auto" autoplay src="http://7xj9ez.com1.z0.glb.clouddn.com/5.mp4" ></video>
     		<div class="page1-con page-con" id="kiss"></div>
     	</div>
     	<div class="page page2">
-    		<video class="video-box" id="videoIndex2" x-webkit-airplay="true" webkit-playsinline="true" preload="auto" autoplay  src="http://7xj9ez.com1.z0.glb.clouddn.com/2.mp4"></video>
+    		<video class="video-box" id="videoIndex2" x-webkit-airplay="true" webkit-playsinline="true" preload="auto" autoplay  src="http://7xj9ez.com1.z0.glb.clouddn.com/2.mp4" ></video>
     	</div>
 	</div>
 </body>
+<script>
+    wx.error(function(res){
+    	alert(JSON.stringify(res))
+    });
+    wx.ready(function(){
+        wx.onMenuShareTimeline({
+            title: '我们可能是世界上最糟糕的广告公司', // 分享标题
+            link: location.href, // 分享链接
+            imgUrl: 'https://d13yacurqjgara.cloudfront.net/users/60166/screenshots/987665/volcano1.jpg', // 分享图标
+            success: function () {
+                // alert(1);
+            },
+            cancel: function () {
+                // alert(2);
+            }
+        });
+
+    	wx.onMenuShareAppMessage({
+		    title: 'ideaology', // 分享标题
+		    desc: '我们可能是世界上最糟糕的广告公司', // 分享描述
+		    link: location.href, // 分享链接
+		    imgUrl: 'https://d13yacurqjgara.cloudfront.net/users/60166/screenshots/987665/volcano1.jpg', // 分享图标
+		    type: '', // 分享类型,music、video或link，不填默认为link
+		    dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+		    success: function () {
+                // alert(1);
+		    },
+		    cancel: function () {
+		    	// alert(2);
+		    }
+		});
+
+    });
+	wx.config({
+        debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+        appId: '{{appid}}', // 必填，公众号的唯一标识
+        timestamp: {{auth.timestamp}}, // 必填，生成签名的时间戳
+        nonceStr: '{{auth.noncestr}}', // 必填，生成签名的随机串
+        signature: '{{signature}}', // 必填，签名，见附录1
+        jsApiList: [
+	        'checkJsApi',
+	        'onMenuShareTimeline',
+	        'onMenuShareAppMessage',
+	        'onMenuShareQQ',
+	        'onMenuShareWeibo',
+	        'onMenuShareQZone',
+	        'hideMenuItems',
+	        'showMenuItems',
+	        'hideAllNonBaseMenuItem',
+	        'showAllNonBaseMenuItem',
+	        'translateVoice',
+	        'startRecord',
+	        'stopRecord',
+	        'onVoiceRecordEnd',
+	        'playVoice',
+	        'onVoicePlayEnd',
+	        'pauseVoice',
+	        'stopVoice',
+	        'uploadVoice',
+	        'downloadVoice',
+	        'chooseImage',
+	        'previewImage',
+	        'uploadImage',
+	        'downloadImage',
+	        'getNetworkType',
+	        'openLocation',
+	        'getLocation',
+	        'hideOptionMenu',
+	        'showOptionMenu',
+	        'closeWindow',
+	        'scanQRCode',
+	        'chooseWXPay',
+	        'openProductSpecificView',
+	        'addCard',
+	        'chooseCard',
+	        'openCard'
+	      ]
+    });
+</script>
 <script src="/vendor/zepto.min.js"></script>
 <script>
-	var ratio = 968 / 544;
-	var screen_width ,screen_heigh;
-	var query = function(selector){
-		return document.querySelector(selector);
-	};
-	var v1 = query("#videoIndex1"),v2 = query("#videoIndex2"), kiss = $("#kiss");
-	setKissStyle();
-	window.addEventListener("orientationchange", function() {
-		setKissStyle()
-	});
-	window.addEventListener("resize", function() {
-		setKissStyle()
-	});
-	function setKissStyle() {
-		screen_width = document.documentElement.clientWidth,
-		screen_height = document.documentElement.clientHeight;
-		if (screen_width / screen_height > 1.7) {
-			kiss.css({
-				"height": "100%",
-				"width": ratio * screen_height + "px"
-			});
-		} else {
-			kiss.css({
-				"width": "100%",
-				"height": "56.2%"
-			});
-		}
-	}
-	setTimeout(function(){
-		v2.pause();
-	},100);
-
-	v1.addEventListener("ended",function(e) {
-		$(".page1").addClass("done");
-	});
-	kiss.on('touchstart', function (e) {
-		if (e.touches.length > 1) {
-			$(".page1").remove();
-			$(".page2").show();
-			setTimeout(function (){
-			  v2.play();
-			},200)
-		}
-	});
+    var ratio = 968 / 544;
+    var screen_width ,screen_heigh;
+    var query = function(selector){
+        return document.querySelector(selector);
+    };
+    var v1 = query("#videoIndex1"),v2 = query("#videoIndex2"), kiss = $("#kiss");
+    setKissStyle();
+    window.addEventListener("orientationchange", function() {
+        setKissStyle()
+    });
+    window.addEventListener("resize", function() {
+        setKissStyle()
+    });
+    function setKissStyle() {
+        screen_width = document.documentElement.clientWidth,
+        screen_height = document.documentElement.clientHeight;
+        if (screen_width / screen_height > 1.7) {
+            kiss.css({
+                "height": "100%",
+                "width": ratio * screen_height + "px"
+            });
+        } else {
+            kiss.css({
+                "width": "100%",
+                "height": "56.2%"
+            });
+        }
+    }
+    setTimeout(function(){
+        v2.pause();
+    },100);
+    v1.addEventListener("ended",function(e) {
+        $(".page1").addClass("done");
+    });
+    kiss.on('touchstart', function (e) {
+        if (e.touches.length > 1) {
+            $(".page1").remove();
+            $(".page2").show();
+            setTimeout(function (){
+              v2.play();
+            },200)
+        }
+    });
 </script>
 </html>
