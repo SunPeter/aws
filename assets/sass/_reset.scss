@@ -1,0 +1,37 @@
+body {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	font: 12px/1.5 'Lucida Grande',tahoma,arial,宋体;
+	color: #666;
+	background: #fff center top no-repeat;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+a {
+	outline: 0;
+	text-decoration: none;
+}
+img {
+	border: 0;
+	-ms-interpolation-mode: bicubic;
+}
+ul,
+li,
+dl,
+dt,
+dd,
+form {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.clearfix {
+	height: 0;
+	clear: both;
+	float: none;
+	overflow: hidden;
+	width:100%
+}

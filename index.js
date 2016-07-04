@@ -10,7 +10,11 @@ app.use(handlebars({
 }));
 app.use(router.dispatcher())
 
-router.route('/').get(function* (next) {
+router.route('/wx/index').get(function* (next) {
+    yield this.render("wx_index", {});
+});
+
+router.route(['/','/index']).get(function* (next) {
     yield this.render("index", {});
 });
 

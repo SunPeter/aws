@@ -28,25 +28,5 @@
     "out_file"           : "/var/aws/out.log",
     "pid_file"           : "/var/aws/aws.pid",
     "watch"              : false
-  }, {
-    "name"               : "script",
-    "script"             : "script.js",
-    "env": {
-      "COMMON_VARIABLE": "true",
-      "NODE_ENV": "production",
-      "BABEL_DISABLE_CACHE": 1
-    },
-    "exec_interpreter"   : "node",
-    "node_args"          : "--harmony",
-    "exec_mode"          : "cluster_mode",
-    "cron_restart"       : "* 1 * * * *",
-    "instances"          : 1,
-    "log_date_format"    : "YYYY-MM-DD HH:mm Z",
-    "max_memory_restart" : "100M",
-    "merge_logs"         : true,
-    "error_file"         : "/var/aws/script/error.log",
-    "out_file"           : "/var/aws/script/out.log",
-    "pid_file"           : "/var/aws/script/script.pid",
-    "watch"              : false
   }]
 }
