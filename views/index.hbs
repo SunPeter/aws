@@ -65,7 +65,6 @@
 	</div>
 </body>
 <script>
-	alert(location.href);
     wx.error(function(res){
     	alert(JSON.stringify(res))
     });
@@ -77,10 +76,10 @@
 		    imgUrl: '', // 分享图标
 		    type: '', // 分享类型,music、video或link，不填默认为link
 		    dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
-		    success: function () { 
+		    success: function () {
 		    	alert(1);
 		    },
-		    cancel: function () { 
+		    cancel: function () {
 		    	alert(2);
 		    }
 		});

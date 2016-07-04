@@ -1,10 +1,10 @@
 module.exports = {
 	name: "awx",
-	appid: "wx98831d7cee9dc881",
-	secret: "34c487c0f12bdf000fab9f836215ada6",
+	appid: "wx3ae40ed1287e361b",
+	secret: "421d24f6f628057735acb8f4ccff47d1",
 	token: "weixintoken",
 	host: {
-		base: "http://ssd3237649.xicp.net",
+		base: "http://wx.ideaology.cn",
 		api: "https://api.weixin.qq.com"
 	}
 }
