@@ -3,6 +3,7 @@ var getTicket = require("../service/getTicket");
 var checkTicket = require("../service/checkTicket");
 module.exports = function(app) {
     return function*(next) {
+        app.ticket = "kgt8ON7yVITDhtdwci0qedEpXmYRdLr7V65Y7PlFO-JAcf7xeCdALW-14hXDEIR-9JtdgIIURSn6ikuyAlFTLw";
         if (app.ticket && app.ticket_expires && ( (Date.now() - app.ticket_expires) / 1000 ) > 7000 || !app.ticket) {
             yield createTicket(app);
         }

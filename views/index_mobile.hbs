@@ -1,0 +1,57 @@
+<html>
+<head>
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>ideaology 世糟广</title>
+	<noscript>
+        <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, user-scalable=no">
+    </noscript>
+    <script>
+        (function() {
+            var ua = window && window.navigator && window.navigator.userAgent;
+            if (!ua) return;
+            var text, scale = 1.0, ratio = 1;
+            if (/(iphone|ipad|ipod)/i.exec(ua)) {
+                if (window.devicePixelRatio >= 2) {
+                    scale *= 0.5;
+                    ratio *= 2;
+                }
+            }
+            text = '<meta name="viewport" content="initial-scale=' + scale + ', maximum-scale=' + scale +', minimum-scale=' + scale + ', width=device-width, user-scalable=no" />';
+            document.write(text);
+            if (ratio) { document.documentElement.style.fontSize = 50*ratio + "px"; }
+            document.documentElement.classList.add('ratio--' + ratio)
+        })();
+    </script>
+	<link rel="stylesheet" href="/css/index_mobile.css" charset="utf-8">
+</head>
+<body>
+    <div class="wrap">
+		<nav></nav>
+		<div class="slider-wrap">
+			<div id="slider"></div>
+		</div>
+		<div class="section">
+			<img src="/images/m/section1.png" alt="" />
+		</div>
+		<div class="section">
+			<img src="/images/m/section2.png" alt="" />
+		</div>
+		<div class="section">
+			<img src="/images/m/section3.png" alt="" />
+		</div>
+		<div class="section">
+			<img src="/images/m/section4.png" alt="" />
+		</div>
+		<div class="section">
+			<img src="/images/m/section5.png" alt="" />
+		</div>
+	</div>
+</body>
+<script src="/vendor/zepto.min.js"></script>
+<script src="/vendor/islider.min.js"></script>
+<script src="/vendor/islider.plugin.dot.js"></script>
+<script src="/js/index_mobile.js"></script>
+</html>

@@ -1,0 +1,46 @@
+@import "_reset.scss";
+@import "../vendor/islider.min.css";
+body {
+	background: #F5F5F5;
+}
+nav {
+	width: 100%;
+	height: 1.08rem;
+	background: #fff;
+}
+.slider-wrap {
+	box-sizing: border-box;
+	position: relative;
+	height: 2.04rem;
+	padding-top: .32rem;
+	.slider-item {
+		p {
+			text-align: center;
+			font-size: .16rem;
+			line-height: .2rem;
+			color: #777777;
+		}
+		.p1 {
+			font-size: .3rem;
+			color: #1C3E58;
+			line-height: .4rem;
+		}
+		.yellow {
+			color: #FCC400;
+		}
+	}
+	.islider-dot {
+		width: .08rem;
+		height: .08rem;
+		background: #777777;
+	}
+	.islider-dot.active {
+		background: #1C3E58;
+	}
+}
+.section {
+	text-align: center;
+	img {
+		width: 100%;
+	}
+}

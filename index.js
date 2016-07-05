@@ -1,8 +1,8 @@
+var fs = require("fs");
 var koa = require("koa")
 var app = koa()
 var Router = require('trie-koa-router')
 var router = new Router()
-
 var _static = require('koa-static');
 app.use(_static('./assets'));
 
@@ -24,7 +24,12 @@ router.route('/wx/index').get(function* (next) {
 });
 
 router.route(['/','/index']).get(function* (next) {
-    yield this.render("index", {});
+    var ua = this.req.headers['user-agent'];
+    if (/(iPhone|Android|MicroMessenger)/.test(ua)) {
+        yield this.render("index_mobile", {});
+    } else {
+        yield this.render("index", {});
+    }
 });
 
 app.listen(8080)

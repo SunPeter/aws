@@ -1,0 +1,93 @@
+@import url(../vendor/islider.min.css);
+html {
+  -webkit-tap-highlight-color: transparent;
+  height: 100%;
+  min-width: 320px;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  outline: 0;
+  text-decoration: none;
+}
+
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+
+ul,
+li,
+dl,
+dt,
+dd,
+form {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.clearfix {
+  height: 0;
+  clear: both;
+  float: none;
+  overflow: hidden;
+  width: 100%;
+}
+
+body {
+  background: #F5F5F5;
+}
+
+nav {
+  width: 100%;
+  height: 1.08rem;
+  background: #fff;
+}
+
+.slider-wrap {
+  box-sizing: border-box;
+  position: relative;
+  height: 2.04rem;
+  padding-top: .32rem;
+}
+.slider-wrap .slider-item p {
+  text-align: center;
+  font-size: .16rem;
+  line-height: .2rem;
+  color: #777777;
+}
+.slider-wrap .slider-item .p1 {
+  font-size: .3rem;
+  color: #1C3E58;
+  line-height: .4rem;
+}
+.slider-wrap .slider-item .yellow {
+  color: #FCC400;
+}
+.slider-wrap .islider-dot {
+  width: .08rem;
+  height: .08rem;
+  background: #777777;
+}
+.slider-wrap .islider-dot.active {
+  background: #1C3E58;
+}
+
+.section {
+  text-align: center;
+}
+.section img {
+  width: 100%;
+}

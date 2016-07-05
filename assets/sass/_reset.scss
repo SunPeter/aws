@@ -1,10 +1,13 @@
+html {
+	-webkit-tap-highlight-color: transparent;
+	height: 100%;
+	min-width: 320px;
+	overflow-x: hidden;
+}
 body {
 	margin: 0;
 	padding: 0;
 	text-decoration: none;
-	font: 12px/1.5 'Lucida Grande',tahoma,arial,宋体;
-	color: #666;
-	background: #fff center top no-repeat;
 }
 * {
 	margin: 0;
