@@ -12,4 +12,16 @@
         animateTime: 800,
 		plugins: ['dot']
     });
+
+	var nav = $("#nav_wrap");
+	nav.on("click", function(e){
+		var parent = $(this).parent();
+		e.stopPropagation()
+		e.preventDefault();
+		if (parent.hasClass("active")) {
+			parent.removeClass("active");
+		} else {
+			parent.addClass("active");
+		}
+	})
 })
