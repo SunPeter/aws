@@ -18,7 +18,7 @@ app.use(login);
 
 app.use(router.dispatcher())
 
-router.route('/wx/index').get(function* (next) {
+router.route(['/wx/index','/wx/index1', '/wx/index2', '/wx/index3']).get(function* (next) {
     var signature = require("./service/signature")(app, this);
     yield this.render("wx_index", signature);
 });
