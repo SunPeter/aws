@@ -53,7 +53,7 @@
         display: none;
         position: fixed;
         left: 50%;
-        bottom: 100px;
+        top: 50%;
         transition: all .3s linear;
         transform: translate(-50%, -50%);
         border-radius: 3px;
@@ -81,7 +81,7 @@
     		<video class="video-box" id="videoIndex2" x-webkit-airplay="true" webkit-playsinline="true" preload="auto" autoplay  src="http://77g2du.com1.z0.glb.clouddn.com/2.mp4" ></video>
     	</div>
 	</div>
-    <div id="toast" class="toast"><p>请双指kiss me</p></div>
+    <div id="toast" class="toast"><p>别点！你倒是亲啊！</p></div>
 </body>
 <script>
     wx.error(function(res){
@@ -208,7 +208,7 @@
         } else {
             toast.addClass("show");
             setTimeout(function () {
-                toast.remove()
+                toast.removeClass("show");
             }, 3000);
         }
     });
