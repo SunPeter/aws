@@ -49,6 +49,24 @@
 	.done .page1-con {
 		display: block;
 	}
+    .toast {
+        display: none;
+        position: fixed;
+        left: 50%;
+        bottom: 100px;
+        transition: all .3s linear;
+        transform: translate(-50%, -50%);
+        border-radius: 3px;
+        width: 150px;
+        padding: 10px;
+        font-size: 14px;
+        text-align: center;
+        color: #fff;
+        background: rgba(40,40,40,.75);
+    }
+    .toast.show {
+        display: block;
+    }
     </style>
     <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 </head>
@@ -56,13 +74,14 @@
 <body>
     <div class="wrap">
     	<div class="page page1">
-    		<video class="video-box" id="videoIndex1" x-webkit-airplay="true" webkit-playsinline="true" preload="auto" autoplay src="http://7xj9ez.com1.z0.glb.clouddn.com/5.mp4" ></video>
+    		<video class="video-box" id="videoIndex1" x-webkit-airplay="true" webkit-playsinline="true" preload="auto" autoplay src="http://77g2du.com1.z0.glb.clouddn.com/1.mp4" ></video>
     		<div class="page1-con page-con" id="kiss"></div>
     	</div>
     	<div class="page page2">
-    		<video class="video-box" id="videoIndex2" x-webkit-airplay="true" webkit-playsinline="true" preload="auto" autoplay  src="http://7xj9ez.com1.z0.glb.clouddn.com/2.mp4" ></video>
+    		<video class="video-box" id="videoIndex2" x-webkit-airplay="true" webkit-playsinline="true" preload="auto" autoplay  src="http://77g2du.com1.z0.glb.clouddn.com/2.mp4" ></video>
     	</div>
 	</div>
+    <div id="toast" class="toast"><p>请双指kiss me</p></div>
 </body>
 <script>
     wx.error(function(res){
@@ -150,7 +169,7 @@
     var query = function(selector){
         return document.querySelector(selector);
     };
-    var v1 = query("#videoIndex1"),v2 = query("#videoIndex2"), kiss = $("#kiss");
+    var v1 = query("#videoIndex1"),v2 = query("#videoIndex2"), kiss = $("#kiss"), toast = $("#toast");
     setKissStyle();
     window.addEventListener("orientationchange", function() {
         setKissStyle()
@@ -186,6 +205,11 @@
             setTimeout(function (){
               v2.play();
             },200)
+        } else {
+            toast.addClass("show");
+            setTimeout(function () {
+                toast.remove()
+            }, 3000);
         }
     });
 </script>
