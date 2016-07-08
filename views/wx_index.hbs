@@ -101,8 +101,8 @@
         });
 
     	wx.onMenuShareAppMessage({
-		    title: 'ideaology', // 分享标题
-		    desc: '[HD/5M]OBA-269ノー紅裙ンで僕を誘す吻ん汚な2発射.avi', // 分享描述
+		    title: '[HD/5M]紅裙ン誘す吻ん汚な.avi', // 分享标题
+		    desc: '', // 分享描述
 		    link: location.href, // 分享链接
 		    imgUrl: 'http://wx.ideaology.cn/images/title.png', // 分享图标
 		    type: '', // 分享类型,music、video或link，不填默认为link
@@ -195,16 +195,17 @@
     setTimeout(function(){
         v2.pause();
     },100);
+    var timer;
     v1.addEventListener("ended",function(e) {
         $(".page1").addClass("done");
+        timer = this.setTimeout(function () {
+            stage2();
+        }, 5000);
     });
     kiss.on('touchstart', function (e) {
         if (e.touches.length > 1) {
-            $(".page1").remove();
-            $(".page2").show();
-            setTimeout(function (){
-              v2.play();
-            },200)
+            clearTimeout(timer);
+            stage2();
         } else {
             toast.addClass("show");
             setTimeout(function () {
@@ -212,5 +213,13 @@
             }, 3000);
         }
     });
+
+    function stage2() {
+        $(".page1").remove();
+        $(".page2").show();
+        setTimeout(function (){
+          v2.play();
+        },200)
+    }
 </script>
 </html>
