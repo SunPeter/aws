@@ -198,7 +198,7 @@
     var timer;
     v1.addEventListener("ended",function(e) {
         $(".page1").addClass("done");
-        timer = this.setTimeout(function () {
+        timer = setTimeout(function () {
             stage2();
         }, 5000);
     });
