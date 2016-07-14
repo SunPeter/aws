@@ -49,18 +49,79 @@
 	})
 
 	$("#join-btn").click(function () {
-		// url: ideaology.cn/joinus.html
-		var formData = {
-			name: 1111,
-			contact_type: 222,
-			remark: 333
+		var name = $("#joinus .j-name"), phone = $("#joinus .j-phone"), remark = $("#joinus .j-remark");
+		if (!name || !phone || !remark) {
+			alert("您填写的信息不完整");
+			return;
 		}
-
+		var data = {
+			name: name.val(),
+			contact_type: phone.val(),
+			remark: remark.val()
+		}
+		$.post("http://ideaology.cn/joinus.html", data, function (res) {
+			alert(res.msg);
+	        if(200==res.status){
+	            location.reload();
+	        }
+		})
 	})
-	$("#next-btn").click(function () {
-		$("#step3").addClass("next");
+	var step3 = $("#step3");
+	$(".tab li").on("click", function () {
+		var target = $(this);
+		if (target.index() === 0) {
+			step3.removeClass("next");
+		} else {
+			step3.addClass("next");
+		}
+	});
+	$("#consume-btn").click(function () {
+		var name = $("#consume .j-name"), email = $("#consume .j-email"), describe = $("#consume .j-describe");
+		if (!name || !email || !describe) {
+			alert("您填写的信息不完整");
+			return;
+		}
+		var data = {
+			name: name.val(),
+			business_info: describe.val(),
+			email: email.val(),
+			self_desc: "",
+			feedback1: "",
+			feedback2: "",
+			project_end_time: "",
+			project_budget: "",
+			other: ""
+		}
+		$.post("http://ideaology.cn/contactus.html", data, function (res) {
+			alert(res.msg);
+	        if(200==res.status){
+	            location.reload();
+	        }
+		})
 	})
 	$("#business-btn").click(function () {
-		alert(2);
+		var name = $("#business .j-name"), email = $("#business .j-email"), describe = $("#business .j-describe"), remark = $("#business .j-remark");
+		if (!name || !email || !describe) {
+			alert("您填写的信息不完整");
+			return;
+		}
+		var data = {
+			name: name.val(),
+			remark: remark.val(),
+			business_info: describe.val(),
+			email: email.val(),
+			self_desc: "",
+			feedback1: "",
+			feedback2: "",
+			project_end_time: "",
+			project_budget: "",
+			other: ""
+		}
+		$.post("http://ideaology.cn/contactus.html", data, function (res) {
+			alert(res.msg);
+	        if(200==res.status){
+	            location.reload();
+	        }
+		})
 	})
 })

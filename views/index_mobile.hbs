@@ -47,13 +47,11 @@
     		<div class="slider-wrap">
     			<div id="slider"></div>
     		</div>
-    		<div class="section">
-    			<img src="/images/m/section1.png" alt="" width="100%"/>
-    		</div>
+    		<div class="section section1"></div>
     		<div class="section flow">
     			<a class="btn" href="javascript:void(0);">获取免费咨询</a>
     			<p class="p1">我们的服务流程</p>
-    			<p>仅需3步，即可畅享世界级的服务体验。</p>
+    			<p>仅需3步，即可畅享世界级的服务体验</p>
     			<p class="p2">提交项目概要</p>
     			<img src="/images/m/arrow1.png" alt="" />
     			<p class="p2">获取策略和创意</p>
@@ -64,39 +62,38 @@
     			<div class="section" style="background:#FFD102; color: #000; padding-top: .12rem;">
     				<img src="/images/m/section2.png" alt="" style="width:3.92rem"/>
     				<div class="textarea">
-    					<p class="p2">来自全球的拍摄资源</p>
+    					<p class="title">来自全球的拍摄资源</p>
     					<p>我们将视频的拍摄执行放到了泰国，提升执行品质的同时，还帮助客户合理地控制了价格。泰国早在几十年前，就成为了整个欧美在亚洲的摄制中心</p>
     				</div>
     			</div>
     			<div class="section" style="padding-top: .2rem;">
     				<img src="/images/m/section3.png" alt="" style="width:3.36rem"/>
                     <div class="textarea">
-    					<p class="p2">决策机制最优化</p>
+    					<p class="title">决策机制最优化</p>
     					<p>客户不再只面对某一位导演，而将直面整个行业，我们在给予客户充分选择的同时，也让整个决策流程更透明</p>
     				</div>
     			</div>
     			<div class="section" style="background:#25CE9E; color: #1C3E58; padding-top: .18rem; padding-bottom: .4rem;">
     				<img src="/images/m/section4.png" alt="" style="width:2.87rem"/>
                     <div class="textarea">
-    					<p class="p2">费用仅有行业均值的50%</p>
+    					<p class="title">费用仅有行业均值的50%</p>
     					<p>感谢互联网打破了行业和信息的壁垒，让我们能够以行业平均50%的价格，为客户提供服务。我们的拍摄费用从10几万到上百万不等</p>
     				</div>
     			</div>
     			<div class="section" style="background:#4088DA; color: #fff;padding-top: .44rem;padding-bottom: .4rem;">
     				<img src="/images/m/section5.png" alt="" style="width:2.8rem"/>
                     <div class="textarea">
-    					<p class="p2">创意服务众包化</p>
+    					<p class="title">创意服务众包化</p>
     					<p>圈养的创意人员容易失去激情，我们同来自全球的数千位创意工作者保持着长期合作关系，在这里，没有不可能和做不到</p>
     				</div>
     			</div>
     		</div>
             <div class="cooperate">
+                <p>案例展示</p>
                 <ul>
-                    <li>
-                        <img src="/images/m/company1.png" alt="" />
+                    <li class="run">
                     </li>
-                    <li>
-                        <img src="/images/m/company2.png" alt="jd" />
+                    <li class="jd">
                     </li>
                 </ul>
             </div>
@@ -108,15 +105,15 @@
                 <p class="p2">团队协作帮助我们实现梦想</p>
                 <a href="javascript(void(0))" class="email-btn btn">电子邮件</a>
                 <p class="p3">or</p>
-                <form>
+                <form id="joinus">
                     <div class="form-row">
-                        <input type="text" placeholder="姓名"></input>
+                        <input type="text" placeholder="姓名" class="j-name"></input>
                     </div>
                     <div class="form-row">
-                        <input type="tel" placeholder="联系方式"></input>
+                        <input type="tel" placeholder="联系方式"  class="j-phone"></input>
                     </div>
                     <div class="form-row">
-                        <textarea  placeholder="想对我们说的话"></textarea>
+                        <textarea  placeholder="想对我们说的话" class="j-remark"></textarea>
                     </div>
                     <a class="submit-btn btn" id="join-btn">发送</a>
                 </form>
@@ -128,36 +125,36 @@
                 <li>我要做视频</li>
                 <li>商业合作</li>
             </ul>
-            <form id="submit-video">
+            <form id="consume">
                 <p>通过信息提供，能够帮助我们更了解您的需求,</p>
                 <p>从而更好的为您提供咨询服务</p>
                 <div class="form-row">
-                    <input type="text" placeholder="姓名"></input>
+                    <input type="text" placeholder="姓名" class="j-name"></input>
                 </div>
                 <div class="form-row">
-                    <input type="email" placeholder="电子邮箱"></input>
+                    <input type="email" placeholder="电子邮箱" class="j-email"></input>
                 </div>
                 <div class="form-row">
-                    <textarea  placeholder="请描述下您的具体业务"></textarea>
+                    <textarea  placeholder="请描述下您的具体业务" class="j-describe"></textarea>
                 </div>
-                <a class="next-btn btn" id="next-btn">下一步</a>
+                <a class="submit-btn btn" id="consume-btn">发送</a>
             </form>
             <form id="business">
                 <p>对于合作，我们始终保持着完全开放的心态,</p>
                 <p>随时恭候您的来信</p>
                 <div class="form-row">
-                    <input type="text" placeholder="姓名"></input>
+                    <input type="text" placeholder="姓名" class="j-name"></input>
                 </div>
                 <div class="form-row">
-                    <input type="email" placeholder="电子邮箱"></input>
+                    <input type="email" placeholder="电子邮箱" class="j-email"></input>
                 </div>
                 <div class="form-row">
-                    <textarea  placeholder="请描述下您的主营业务"></textarea>
+                    <textarea  placeholder="请描述下您的主营业务" class="j-describe"></textarea>
                 </div>
                 <div class="form-row">
-                    <textarea  placeholder="请留下您想要传递给我们的信息"></textarea>
+                    <textarea  placeholder="请留下您想要传递给我们的信息" class="j-remark"></textarea>
                 </div>
-                <a class="submit-btn btn" id="busniess-btn">发送</a>
+                <a class="submit-btn btn" id="business-btn">发送</a>
             </form>
         </div>
         <footer>
