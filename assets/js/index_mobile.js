@@ -93,7 +93,6 @@
 			other: ""
 		}
 		$.post("http://ideaology.cn/contactus.html", data, function (res) {
-			alert(res.msg);
 	        if(200==res.status){
 	            location.reload();
 	        }
@@ -118,7 +117,6 @@
 			other: ""
 		}
 		$.post("http://ideaology.cn/contactus.html", data, function (res) {
-			alert(res.msg);
 	        if(200==res.status){
 	            location.reload();
 	        }

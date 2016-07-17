@@ -1,0 +1,36 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <title>ideaology</title>
+    <link rel="stylesheet" href="/css/join.css" media="screen" title="no title" charset="utf-8">
+</head>
+
+<body>
+    {{> nav current='2'}}
+    <div class="wrap">
+        <div class="content">
+            <div class="content-form">
+                <h1>加入我们</h1>
+                <p>团队协作帮助我们实现梦想</p>
+                <a href="mailto::infor@ideaology.cn" class="email-btn btn">电子邮件</a>
+                <p class="p3">or</p>
+                <form id="joinus">
+                    <div class="form-row inline-form-row">
+                        <input type="text" placeholder="姓名" class="j-name"></input>
+                        <input type="tel" placeholder="联系方式"  class="j-phone"></input>
+                    </div>
+                    <div class="form-row">
+                        <textarea  placeholder="想对我们说的话" class="j-remark"></textarea>
+                    </div>
+                    <a href="javascript:void(0);" class="submit-btn btn j-joinbtn">发送</a>
+                </form>
+            </div>
+        </div>
+    </div>
+    {{> footer}}
+</body>
+<script src="/vendor/jquery.min.js"></script>
+<script src="/js/join.js"></script>
+</html>

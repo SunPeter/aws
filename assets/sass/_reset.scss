@@ -35,9 +35,11 @@ form {
 	list-style: none;
 }
 .clearfix {
-	height: 0;
-	clear: both;
-	float: none;
-	overflow: hidden;
-	width:100%
+	&:before, &:after {
+		display: table;
+		content: " ";
+	}
+	&:after {
+		clear: both;
+	}
 }

@@ -1,0 +1,39 @@
+.footer {
+    background: #1C3E58;
+    .wrap {
+        width: 1000px;
+        margin: 0 auto
+    }
+    .top {
+        width: 550px;
+        padding: 34px 0 34px 450px;
+        overflow: hidden;
+        background: url("../images/logo1.png") 80px center no-repeat;
+        border-bottom: 1px solid rgba(255,255,255,0.16);
+        ul {
+            @extend .clearfix;
+            height: 24px;
+            li {
+                float: left;
+                *display: inline-block;
+                margin-right: 54px;
+                text-align: center;
+                a {
+                    color: #DDDDDD;
+                    font-size: 12px;
+                    line-height: 24px;
+                }
+            }
+        }
+    }
+    .bottom {
+        padding: 22px 0 25px 0;
+        background: url("../images/wx1.png") 100px 22px no-repeat;
+        p {
+            text-align: center;
+            font-size: 12px;
+            line-height: 28px;
+            color: #DDDDDD;
+        }
+    }
+}

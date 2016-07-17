@@ -1,0 +1,244 @@
+html {
+  -webkit-tap-highlight-color: transparent;
+  height: 100%;
+  min-width: 320px;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 0.28em;
+  line-height: 1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  outline: 0;
+  text-decoration: none;
+}
+
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+
+ul,
+li,
+dl,
+dt,
+dd,
+form {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.clearfix:before, .nav ul:before, .footer .top ul:before, .clearfix:after, .nav ul:after, .footer .top ul:after {
+  display: table;
+  content: " ";
+}
+.clearfix:after, .nav ul:after, .footer .top ul:after {
+  clear: both;
+}
+
+.nav {
+  padding: 59px 0;
+  background: #fff;
+}
+.nav ul {
+  width: 860px;
+  margin: 0 auto;
+}
+.nav ul li {
+  float: left;
+  width: 19%;
+  height: 32px;
+  text-align: center;
+}
+.nav ul li a {
+  text-align: center;
+  line-height: 32px;
+  font-size: 16px;
+  color: #1C3E58;
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+.nav ul li a.active, .nav ul li a:hover {
+  border-bottom: 3px solid #FFD102;
+}
+.nav ul li.logo {
+  width: 24%;
+  background: url("../images/logo.png") center no-repeat;
+}
+.nav ul li.logo:hover {
+  border-bottom: none;
+}
+
+.footer {
+  background: #1C3E58;
+}
+.footer .wrap {
+  width: 1000px;
+  margin: 0 auto;
+}
+.footer .top {
+  width: 550px;
+  padding: 34px 0 34px 450px;
+  overflow: hidden;
+  background: url("../images/logo1.png") 80px center no-repeat;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+}
+.footer .top ul {
+  height: 24px;
+}
+.footer .top ul li {
+  float: left;
+  *display: inline-block;
+  margin-right: 54px;
+  text-align: center;
+}
+.footer .top ul li a {
+  color: #DDDDDD;
+  font-size: 12px;
+  line-height: 24px;
+}
+.footer .bottom {
+  padding: 22px 0 25px 0;
+  background: url("../images/wx1.png") 100px 22px no-repeat;
+}
+.footer .bottom p {
+  text-align: center;
+  font-size: 12px;
+  line-height: 28px;
+  color: #DDDDDD;
+}
+
+body {
+  background: #EEEEEE;
+}
+
+.wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.content {
+  width: 632px;
+  margin: 0 auto;
+  padding: 40px 106px 0;
+  background: url("../images/contact_bg.jpg") left 155px no-repeat;
+}
+.content p {
+  text-align: center;
+  font-size: 16px;
+  line-height: 22px;
+  color: #777777;
+}
+.content .menu {
+  overflow: hidden;
+  width: 224px;
+  background: #B9B9B9;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  padding-left: 150px;
+}
+.content .menu li {
+  overflow: hidden;
+}
+.content .menu li.menu1 {
+  float: left;
+  margin-left: -150px;
+  width: 150px;
+  border-top-right-radius: 6px;
+}
+.content .menu li a {
+  display: block;
+  height: 40px;
+  width: 100%;
+  text-align: center;
+  line-height: 40px;
+  font-size: 14px;
+  color: #515356;
+}
+.content .menu li a.active {
+  border-top-left-radius: 6px;
+  background: #FFD102;
+  color: #fff;
+}
+
+.btn {
+  display: block;
+  width: 166px;
+  height: 36px;
+  margin: 64px auto 16px;
+  color: #fff;
+  font-size: 14px;
+  line-height: 36px;
+  border-radius: 18px;
+  background-color: #4099FF;
+  text-align: center;
+}
+
+.email-btn {
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAcCAYAAAAa/l2sAAAABGdBTUEAALGPC/xhBQAABVZJREFUWAnNWHssZFcYH8baZrcbj6Zp02z8UVLNykpEQtqmQoplG49QWZLStZKWlNSji2lDvLM0XVpENERoUmEj1Luxi2jiUaGk8Qym9RxvwmDGGv1+t/fYNS+jLfb8Mffe73zf7/vdM+f8zneunoBvxsbGgf7+/immpqYyhUJxyOwXeRUKhXqrq6uXKyoqvlpfXy9nXIxwY2VlZdjY2Jiyu7t7+KK0jY2NQ+KUaGtre4knayRwcXH5PTY29gPGPiEh4dPFxcULZy2RSHZEIlEI4xUXF3fL3d39V0FUVJR0enp6My8vz591pqWleQ0PD69c1EhT7qXIyMgPGZ+cnJyPl5aWtuLj4+cF4eHh6yBGBnl6enoUcwoKCnpnbGxs6rxJDw4OToSEhNgxHikpKV/SP74PHjExMX8eEYZBKpUelpWVZZKzEAF2dnZvdXV19aHvPFpPT89v5ubmFjxZg+Li4m/BiTUVwujAomtqaiqjoJcRaG9v/xo9N7Ogs7pWVVU12NjYvMqTvVZbW/uTsgCoJcwIUcAvpByv8wBXa2pqSre3t1n3/3YFZn19fTHluYJclpaWb1RXVz9Wl0ArYQQMDAz0WVtbW/KkhbQwH2xtbanD+lc2YBUUFKQTvj5y0ADd6OvrG9AEdiJhBBJpcXR09Ls8aUFSUlLkzMyMXBOorva5ubk9UqNwhhsREfF+f3//X9ridSIMgPHx8VWSGW8GTonukG1TG7i2vomJifXMzMyPGB4plS8pEqdW2uJ0JgyQ5eXl3dTU1M9YEk9PT6fR0dFZbQnU9dGLTvv4+DgwnMTExM9JUvfU+SrbTkUYwbT7KMrLy5MomR4Senl53Wxtbf1DGVjTc3t7+6Cfn98NxFLTJwlNW1hY0OSuYj81YSDs7+8fFhUVlXh4eHCr2sLC4npbW1u7CrqSoaOj4wkUAExdXV2vksaWAes0DYS51QmQ07SDgwOhTCbjRpnm46yTk5MXSdEjSq4CA1tdXV25g4ODN83TeTjI5XI9Q0NDA3X+KgDKBrY16/Km+PvwNxIG96IBAQFvOzs7v8ljGpLsff+87OG+sLDwIfVz1RbJlgV2T95fSNPrAZWPuqTmfE41JbAwsED4ZAIsHBrdud7e3gmal7bMTtNFJFlYUCxKJAelpaX3md3b29uus7NTTItuhmLfY3bC/GJlZUWmC2udCUNyID0sCSQJ0sSSiMViSXBw8C3Wn3U/+l5ibOwn7DkwMPD25OTkEvMfGhpazcjIOJLJ5OTkO6Q4G6xf01UnwhBziDpLDrGfnZ1VGZGpqant/Pz8IObHrtnZ2feI7LMKhmczPz+/S3V4KPMLDQ11JNIzmsjCfiJhbJPYLnlQfWyjz89RZXD6a5/S6McxElSufk36faDsx57X1tYUNIWSyZ9bwHSyuElTTKNMaiWMAoTJEAFeQYGiS/Gzs7ODhfmwpKQkB/cnNWDS4vuBcryEF6VTxfWGhga1MqmWMEo6lHYUew0AKPlQ+p2U+L/2V1ZW/kzpXkFOakYtLS0VJJ3HYFUIo1hG0UwBBohCMY2i+ljUGT50d3d3mZmZMZm8RJL43d7es137GGEcQ3AcAVE0HFNwXDlDfmqhSfrGw8LCjmQyNzc3nkqCp3DmCFMVJsUBDwe9f6gKBDgA4iCoFvEcjCMjIxLalNwYn6ysrLtEWsodQmmnGqQbV9aJozWO2OfAS2sKqpe3aVM50nKqyW+7ubl1gqcJfvCxorm5OQEfL16Utrm5qaBqUOTo6MitKXDl9A+E6VPVXV9f329MTExkVNyoVjFwOueGT1X0ieoyqVQ0DeSPSP83o5T5VYbsukwAAAAASUVORK5CYII=') #4099FF 24px center no-repeat;
+  background-size: 22px auto;
+}
+
+.form {
+  background: #fff;
+  padding: 50px 0 60px 0;
+  display: none;
+}
+.form p {
+  font-size: 14px;
+  line-height: 40px;
+  color: #1C3E58;
+  text-align: center;
+}
+.form input, .form textarea {
+  display: block;
+  width: 500px;
+  height: 46px;
+  margin: 20px auto 0;
+  font-size: 12px;
+  color: #B1B1B1;
+  line-height: 18px;
+  outline: none;
+  -webkit-appearance: none;
+  border-radius: 0;
+  border: 1px solid #C8C8C8;
+  padding: 20px;
+}
+.form textarea {
+  margin-top: 38px;
+  height: 168px;
+  resize: none;
+}
+.form.inline-form-row input {
+  display: inline-block;
+  width: 48%;
+}
+.form.inline-form-row input:first-child {
+  margin-right: 4%;
+}
+.form.inline-form-row input:last-child {
+  margin-right: -4px;
+}
+
+#form1 {
+  display: block;
+}
+
+.bus #form1 {
+  display: none;
+}
+.bus #form2 {
+  display: block;
+}

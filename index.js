@@ -9,7 +9,8 @@ app.use(_static('./assets'));
 
 var handlebars = require("koa-handlebars");
 app.use(handlebars({
-    viewsDir: "views"
+    viewsDir: "views",
+    helpers: require("./extention/render.js")
 }));
 
 // must before router.dispatcher()
@@ -32,4 +33,11 @@ router.route(['/','/index']).get(function* (next) {
     }
 });
 
+router.route(['/join']).get(function* (next) {
+    yield this.render("join", {});
+});
+
+router.route(['/contact']).get(function* (next) {
+    yield this.render("contact", {});
+});
 app.listen(8080)

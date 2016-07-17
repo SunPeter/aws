@@ -1,0 +1,33 @@
+.nav {
+    padding: 59px 0;
+    background: #fff;
+    ul {
+        width: 860px;
+        margin: 0 auto;
+        @extend .clearfix;
+        li {
+            float: left;
+            width: 19%;
+            height: 32px;
+            text-align: center;
+            a {
+                text-align: center;
+                line-height: 32px;
+                font-size: 16px;
+                color: #1C3E58;
+                font-weight: bold;
+                padding-bottom: 5px;
+                &.active, &:hover{
+                    border-bottom: 3px solid #FFD102;
+                }
+            }
+            &.logo {
+                width: 24%;
+                background: url("../images/logo.png") center no-repeat;
+                &:hover {
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,88 @@
+@import "_reset.scss";
+@import "_nav.scss";
+@import "_footer.scss";
+body {
+    background: #EEEEEE;
+}
+.wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.content {
+    width: 1000px;
+    margin: 0 auto;
+    padding-top: 302px;
+    background: url("../images/join.jpg") center 82px no-repeat;
+    .content-form {
+        background: #fff;
+        padding-top: 70px;
+        padding-bottom: 30px;
+    }
+    p {
+        text-align: center;
+        font-size: 16px;
+        line-height: 22px;
+        color: #777777;
+    }
+    h1{
+        margin-top: 60px;
+        font-size: 36px;
+        line-height: 40px;
+        color: #1C3E58;
+        text-align: center;
+    }
+    .p3 {
+        color: #25CE9E;
+        font-size: 15px;
+    }
+}
+.btn {
+    display: block;
+    width: 166px;
+    height: 36px;
+    margin: 64px auto 16px;
+    color: #fff;
+    font-size: 14px;
+    line-height: 36px;
+    border-radius: 18px;
+    background-color: #4099FF;
+    text-align: center;
+}
+.email-btn {
+    background: inline-image("m/email.png") #4099FF 24px center no-repeat;
+    background-size: 22px auto;
+}
+.form-row {
+    margin: .16px auto;
+    width: 80%;
+    input, textarea{
+        display: block;
+        width: 100%;
+        height: 46px;
+        font-size: 12px;
+        color: #B1B1B1;
+        line-height: 18px;
+        padding: 20px;
+        outline: none;
+        -webkit-appearance: none;
+        border-radius: 0;
+        border: 1px solid #C8C8C8;
+    }
+    textarea {
+        margin-top: 38px;
+        height: 168px;
+        resize: none;
+    }
+    &.inline-form-row {
+        input {
+            display: inline-block;
+            width: 48%;
+            &:first-child {
+                margin-right: 4%;
+            }
+            &:last-child {
+                margin-right: -4px;
+            }
+        }
+    }
+}
