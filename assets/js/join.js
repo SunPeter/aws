@@ -8,7 +8,7 @@ $(function() {
             contact_type: phone,
             remark: remark
         }
-        $.post("http://ideaology.cn/joinus.html", data, function (res) {
+        $.post("/api/joinus", data, function (res) {
             if(200==res.status){
                 location.reload();
             }

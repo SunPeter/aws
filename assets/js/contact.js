@@ -37,7 +37,7 @@ $(function() {
             project_budget: project_budget,
             other: other
         }
-        $.post("http://ideaology.cn/contactus.html", data, function (res) {
+        $.post("/api/contactus", data, function (res) {
             if(200==res.status){
                 location.reload();
             }
@@ -64,7 +64,7 @@ $(function() {
             project_budget: "",
             other: other
         }
-        $.post("http://ideaology.cn/contactus.html", data, function (res) {
+        $.post("/api/contactus", data, function (res) {
             if(200==res.status){
                 location.reload();
             }

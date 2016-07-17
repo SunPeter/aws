@@ -3,9 +3,11 @@ var koa = require("koa")
 var app = koa()
 var Router = require('trie-koa-router')
 var router = new Router()
-var _static = require('koa-static');
+var _static = require('koa-static')
+var request = require('koa-request')
+var koaBody   = require('koa-body')
 app.use(_static('./assets'));
-
+app.use(koaBody({formidable:{uploadDir: __dirname}}))
 
 var handlebars = require("koa-handlebars");
 app.use(handlebars({
@@ -39,5 +41,23 @@ router.route(['/join']).get(function* (next) {
 
 router.route(['/contact']).get(function* (next) {
     yield this.render("contact", {});
+});
+
+router.route("/api/joinus").post(function* (next) {
+    var form = this.request.body;
+    var res = yield request.post({
+        url: "http://ideaology.cn/joinus.html",
+        form: form
+    });
+    this.body = JSON.parse(res.body);
+});
+
+router.route("/api/contactus").post(function* (next) {
+    var form = this.request.body;
+    var res = yield request.post({
+        url: "http://ideaology.cn/contactus.html",
+        form: form
+    });
+    this.body = JSON.parse(res.body);
 });
 app.listen(8080)

@@ -59,7 +59,7 @@
 			contact_type: phone.val(),
 			remark: remark.val()
 		}
-		$.post("http://ideaology.cn/joinus.html", data, function (res) {
+		$.post("/api/joinus", data, function (res) {
 			alert(res.msg);
 	        if(200==res.status){
 	            location.reload();
@@ -76,23 +76,31 @@
 		}
 	});
 	$("#consume-btn").click(function () {
-		var name = $("#consume .j-name"), email = $("#consume .j-email"), describe = $("#consume .j-describe");
-		if (!name || !email || !describe) {
+		var name = $("#consume .j-name").val(),
+			email = $("#consume .j-email").val(),
+			business_info = $("#consume .j-describe").val(),
+			self_desc = $("#consume .j-self_desc").val(),
+	        feedback1 = $("#consume .j-feedback1").val(),
+	        feedback2 = $("#consume .j-feedback2").val(),
+	        project_end_time = $("#consume .j-project_end_time").val(),
+	        project_budget = $("#consume .j-project_budget").val(),
+	        other = $("#consume .j-other").val();
+		if (!name || !email || !business_info) {
 			alert("您填写的信息不完整");
 			return;
 		}
 		var data = {
-			name: name.val(),
-			business_info: describe.val(),
-			email: email.val(),
-			self_desc: "",
-			feedback1: "",
-			feedback2: "",
-			project_end_time: "",
-			project_budget: "",
-			other: ""
+			name: name,
+            business_info: business_info,
+            email: email,
+            self_desc: self_desc,
+            feedback1: feedback1,
+            feedback2: feedback2,
+            project_end_time:project_end_time,
+            project_budget: project_budget,
+            other: other
 		}
-		$.post("http://ideaology.cn/contactus.html", data, function (res) {
+		$.post("/api/contactus", data, function (res) {
 	        if(200==res.status){
 	            location.reload();
 	        }
@@ -116,7 +124,7 @@
 			project_budget: "",
 			other: ""
 		}
-		$.post("http://ideaology.cn/contactus.html", data, function (res) {
+		$.post("/api/contactus", data, function (res) {
 	        if(200==res.status){
 	            location.reload();
 	        }
