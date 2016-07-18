@@ -136,10 +136,15 @@ body {
 }
 
 .content {
-  width: 632px;
+  width: 1000px;
   margin: 0 auto;
-  padding: 40px 106px 0;
-  background: url("../images/contact_bg.jpg") left 155px no-repeat;
+  padding-top: 302px;
+  background: url("../images/join.jpg") center 82px no-repeat;
+}
+.content .content-form {
+  background: #fff;
+  padding-top: 70px;
+  padding-bottom: 30px;
 }
 .content p {
   text-align: center;
@@ -147,36 +152,16 @@ body {
   line-height: 22px;
   color: #777777;
 }
-.content .menu {
-  overflow: hidden;
-  width: 224px;
-  background: #B9B9B9;
-  border-top-left-radius: 6px;
-  border-top-right-radius: 6px;
-  padding-left: 150px;
-}
-.content .menu li {
-  overflow: hidden;
-}
-.content .menu li.menu1 {
-  float: left;
-  margin-left: -150px;
-  width: 150px;
-  border-top-right-radius: 6px;
-}
-.content .menu li a {
-  display: block;
-  height: 40px;
-  width: 100%;
-  text-align: center;
+.content h1 {
+  margin-top: 60px;
+  font-size: 36px;
   line-height: 40px;
-  font-size: 14px;
-  color: #515356;
+  color: #1C3E58;
+  text-align: center;
 }
-.content .menu li a.active {
-  border-top-left-radius: 6px;
-  background: #FFD102;
-  color: #fff;
+.content .p3 {
+  color: #25CE9E;
+  font-size: 15px;
 }
 
 .btn {
@@ -197,54 +182,35 @@ body {
   background-size: 22px auto;
 }
 
-.form {
-  background: #fff;
-  padding: 50px 0 60px 0;
-  display: none;
+.form-row {
+  margin: .16px auto;
+  width: 80%;
 }
-.form p {
-  font-size: 14px;
-  line-height: 40px;
-  color: #1C3E58;
-  text-align: center;
-}
-.form input, .form textarea {
+.form-row input, .form-row textarea {
   display: block;
-  width: 500px;
+  width: 100%;
   height: 46px;
-  margin: 20px auto 0;
   font-size: 12px;
-  color: #000;
+  color: #B1B1B1;
   line-height: 18px;
+  padding: 20px;
   outline: none;
   -webkit-appearance: none;
   border-radius: 0;
   border: 1px solid #C8C8C8;
-  padding: 20px;
 }
-.form textarea {
+.form-row textarea {
   margin-top: 38px;
   height: 168px;
   resize: none;
 }
-.form.inline-form-row input {
+.form-row.inline-form-row input {
   display: inline-block;
   width: 48%;
 }
-.form.inline-form-row input:first-child {
+.form-row.inline-form-row input:first-child {
   margin-right: 4%;
 }
-.form.inline-form-row input:last-child {
+.form-row.inline-form-row input:last-child {
   margin-right: -4px;
-}
-
-#form1 {
-  display: block;
-}
-
-.bus #form1 {
-  display: none;
-}
-.bus #form2 {
-  display: block;
 }

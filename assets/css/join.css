@@ -77,7 +77,12 @@ form {
   width: 24%;
   background: url("../images/logo.png") center no-repeat;
 }
-.nav ul li.logo:hover {
+.nav ul li.logo a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.nav ul li.logo a:hover {
   border-bottom: none;
 }
 
@@ -111,7 +116,8 @@ form {
 }
 .footer .bottom {
   padding: 22px 0 25px 0;
-  background: url("../images/wx1.png") 100px 22px no-repeat;
+  background: url("../images/ewm.png") 90px 12px no-repeat;
+  background-size: 70px;
 }
 .footer .bottom p {
   text-align: center;
@@ -148,6 +154,7 @@ body {
 }
 .content h1 {
   margin-top: 60px;
+  margin-bottom: 15px;
   font-size: 36px;
   line-height: 40px;
   color: #1C3E58;
@@ -185,7 +192,7 @@ body {
   width: 100%;
   height: 46px;
   font-size: 12px;
-  color: #B1B1B1;
+  color: #000;
   line-height: 18px;
   padding: 20px;
   outline: none;
@@ -207,4 +214,22 @@ body {
 }
 .form-row.inline-form-row input:last-child {
   margin-right: -4px;
+}
+
+.content-text {
+  width: 830px;
+  margin: 80px auto 0;
+}
+.content-text p {
+  margin-bottom: 35px;
+  color: #1C3E58;
+  font-size: 18px;
+  line-height: 28px;
+  text-align: left;
+}
+.content-text p.extra {
+  text-align: right;
+  font-size: 16px;
+  line-height: 22px;
+  color: #777777;
 }

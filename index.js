@@ -43,6 +43,10 @@ router.route(['/contact']).get(function* (next) {
     yield this.render("contact", {});
 });
 
+router.route(['/about']).get(function* (next) {
+    yield this.render("about", {});
+});
+
 router.route("/api/joinus").post(function* (next) {
     var form = this.request.body;
     var res = yield request.post({

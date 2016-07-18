@@ -26,7 +26,6 @@ body {
     }
     h1{
         margin-top: 60px;
-        margin-bottom: 15px;
         font-size: 36px;
         line-height: 40px;
         color: #1C3E58;
@@ -61,7 +60,7 @@ body {
         width: 100%;
         height: 46px;
         font-size: 12px;
-        color: #000;
+        color: #B1B1B1;
         line-height: 18px;
         padding: 20px;
         outline: none;
@@ -84,23 +83,6 @@ body {
             &:last-child {
                 margin-right: -4px;
             }
-        }
-    }
-}
-.content-text {
-    width: 830px;
-    margin: 80px auto 0;
-    p {
-        margin-bottom: 35px;
-        color: #1C3E58;
-        font-size: 18px;
-        line-height: 28px;
-        text-align: left;
-        &.extra {
-            text-align: right;
-            font-size: 16px;
-            line-height: 22px;
-            color: #777777;
         }
     }
 }
