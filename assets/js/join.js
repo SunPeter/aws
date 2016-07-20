@@ -9,7 +9,7 @@ $(function() {
             remark: remark
         }
         $.post("/api/joinus", data, function (res) {
-            alert(res.message);
+            alert(res.msg);
             if(200==res.status){
                 location.reload();
             }
