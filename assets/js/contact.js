@@ -38,6 +38,7 @@ $(function() {
             other: other
         }
         $.post("/api/contactus", data, function (res) {
+            alert(res.message);
             if(200==res.status){
                 location.reload();
             }
@@ -65,6 +66,7 @@ $(function() {
             other: other
         }
         $.post("/api/contactus", data, function (res) {
+            alert(res.message);
             if(200==res.status){
                 location.reload();
             }

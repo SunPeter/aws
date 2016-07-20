@@ -101,6 +101,7 @@
             other: other
 		}
 		$.post("/api/contactus", data, function (res) {
+			alert(res.message);
 	        if(200==res.status){
 	            location.reload();
 	        }
@@ -125,6 +126,7 @@
 			other: ""
 		}
 		$.post("/api/contactus", data, function (res) {
+			alert(res.message);
 	        if(200==res.status){
 	            location.reload();
 	        }
