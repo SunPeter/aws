@@ -1,10 +1,11 @@
 <div class="nav">
-
 	<ul>
-		<li><a href="/about" class={{#if (equal current '1')}}"active"{{/if}}>关于我们</a></li>
-		<li><a href="/join" class={{#if (equal current '2')}}"active"{{/if}}>加入我们</a></li>
-		<li class="logo"><a href="/"></a></li>
-		<li><a href="/contact" class={{#if (equal current '3')}}"active"{{/if}}>联系我们</a></li>
-		<li><a href="" class={{#if (equal current '4')}}"active"{{/if}}>ENGLISH</a></li>
+		{{#each menu}}
+			{{#if (equal @index 2)}}
+				<li class="logo"><a href="/"></a></li>
+			{{else}}
+				<li><a href={{url}} class={{#if (equal current '1')}}"active"{{/if}}>{{text}}</a></li>
+			{{/if}}
+		{{/each}}
 	</ul>
 </div>

@@ -1,5 +1,8 @@
 var fs = require("fs");
+var path = require("path");
 var koa = require("koa")
+var locale = require('koa-locale') //  detect the locale
+var i18n = require('koa-i18n')
 var app = koa()
 var Router = require('trie-koa-router')
 var router = new Router()
@@ -8,7 +11,21 @@ var request = require('koa-request')
 var koaBody   = require('koa-body')
 app.use(_static('./assets'));
 app.use(koaBody({formidable:{uploadDir: __dirname}}))
-
+locale(app)
+// Compatible `this.locals`.
+app.use(function *(next) {
+  this.locals = this.state;
+  yield *next;
+});
+app.use(i18n(app, {
+  directory: path.join(__dirname, './i18n'),
+  locales: ['zh-CN', 'en'], //  `zh-CN` defualtLocale, must match the locales to the filenames
+  defaultLocale: 'zh-CN',
+  enables: ['Query'],
+  modes: [
+    'query'                //  optional detect querystring - `/?locale=en-US`
+  ]
+}))
 var handlebars = require("koa-handlebars");
 app.use(handlebars({
     viewsDir: "views",
@@ -28,23 +45,27 @@ router.route(['/wx/index','/wx/index1', '/wx/index2', '/wx/index3']).get(functio
 
 router.route(['/','/index']).get(function* (next) {
     var ua = this.req.headers['user-agent'];
+    var locals = this.i18n.locales[this.i18n.locale];
     if (/(iPhone|Android|MicroMessenger)/.test(ua)) {
-        yield this.render("index_mobile", {});
+        yield this.render("index_mobile",locals);
     } else {
-        yield this.render("index", {});
+        yield this.render("index",locals);
     }
 });
 
 router.route(['/join']).get(function* (next) {
-    yield this.render("join", {});
+    var locals = this.i18n.locales[this.i18n.locale];
+    yield this.render("join", locals);
 });
 
 router.route(['/contact']).get(function* (next) {
-    yield this.render("contact", {});
+    var locals = this.i18n.locales[this.i18n.locale];
+    yield this.render("contact", locals);
 });
 
 router.route(['/about']).get(function* (next) {
-    yield this.render("about", {});
+    var locals = this.i18n.locales[this.i18n.locale];
+    yield this.render("about", locals);
 });
 
 router.route("/api/joinus").post(function* (next) {
