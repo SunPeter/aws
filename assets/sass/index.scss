@@ -4,7 +4,10 @@
 body {
     background: #EEEEEE;
 }
-.wrap {
+.wrap-top {
+    background: #F5F5F5;
+}
+.wrap-bottom {
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -51,11 +54,11 @@ body {
         background-image: inline-image("arrow-r.png");
     }
 }
-
 .banner {
-    img {
-        width: 100%;
-    }
+    margin: 0 auto;
+    height: 306px;
+    background:  url("../images/section1.jpg") center repeat-x;
+    background-size: auto 306px;
 }
 .consume-btn {
     display: block;
@@ -79,12 +82,13 @@ body {
     }
     .intro {
         width: 560px;
-        padding-right: 440px;
+        padding: 0 440 40px 0;
         height: 260px;
         border-bottom: 1px solid #EEEEEE;
         background: url("../images/intro.jpg") right top no-repeat;
         p {
             font-size: 24px;
+            line-height: 30px;
             color: #000;
             &.p2 {
                 font-size: 30px;
@@ -238,6 +242,7 @@ body {
                 background-image: url("../images/avator2.png");
             }
             .avator3 {
+                background-image: url("../images/avator1.png");
                 transform: rotate3d(0, 1, 0, 180deg);
             }
             .info {

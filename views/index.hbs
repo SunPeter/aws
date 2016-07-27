@@ -10,96 +10,98 @@
 <body>
     {{> nav current='0' menu=menu}}
     <div class="wrap">
-		{{#with page1}}
-		<div class="slider" id="slider" style="overflow:hidden;">
-			{{#each slider}}
-            <div>
-                <p class="title">{{title}}</p>
-                <p>{{{subtitle}}}</p>
-            </div>
-        	{{/each}}
-		</div>
-        <div class="banner">
-            <img src="images/section1.jpg" alt="">
-        </div>
-		{{#with intro}}
-        <div class="content">
-            <a href="/contact" class="consume-btn">{{btn}}</a>
-            <div class="intro">
-                <p class="p2">{{title}}</p>
-                <p>{{subtitle}}</p>
-            </div>
-            <div class="list">
-				{{#each list}}
-                <div class="item">
-                    <p class="title">{{title}}</p>
-                    <p>{{text}}</p>
-                </div>
-                {{/each}}
-            </div>
-        </div>
+		<div class="wrap-top">
+			{{#with index}}
+			<div class="slider" id="slider" style="overflow:hidden;">
+				{{#each slider}}
+	            <div>
+	                <p class="title">{{title}}</p>
+	                <p>{{{subtitle}}}</p>
+	            </div>
+	        	{{/each}}
+			</div>
+	        <div class="banner"></div>
+			{{#with intro}}
+		        <div class="content">
+		            <a href="/contact" class="consume-btn">{{btn}}</a>
+		            <div class="intro">
+		                <p class="p2">{{title}}</p>
+		                <p>{{subtitle}}</p>
+		            </div>
+		            <div class="list">
+						{{#each list}}
+		                <div class="item">
+		                    <p class="title">{{title}}</p>
+		                    <p>{{text}}</p>
+		                </div>
+		                {{/each}}
+		            </div>
+		        </div>
+			</div>
+		<div class="wrap-bottom">
 		{{/with}}
-        <div class="content1">
-            <ul>
-                <li style="background-color: #FFD102;color:#000;">
-                    <img src="/images/section2.jpg" alt="">
-                    <p class="title">{{content1.0.title}}</p>
-                    <p>{{content1.0.text}}</p>
-                </li>
-                <li style="background-color: #F5F5F5;">
-                    <img src="/images/section3.jpg" alt="">
-					<p class="title">{{content1.1.title}}</p>
-                    <p>{{content1.1.text}}</p>
-                </li>
-                <li style="background-color: #25CE9E;">
-                    <img src="/images/section4.jpg" alt="">
-					<p class="title">{{content1.2.title}}</p>
-                    <p>{{content1.2.text}}</p>
-                </li>
-                <li style="background-color: #4088DA;color:#fff;">
-                    <img src="/images/section5.jpg" alt="">
-					<p class="title">{{content1.3.title}}</p>
-                    <p>{{{content1.3.text}}}</p>
-                </li>
-            </ul>
-        </div>
-        <div class="display">
-			{{#with display}}
-            <h1>{{title}}</h1>
-            <ul class="content">
-                <li><img src="/images/display1.jpg" alt=""></li>
-                <li style="background: #4088DA">
-                    <p class="title">京东 JD.COM</p>
-                    <p class="subtitle">影院贴片广告</p>
-                    <p>在美国队长3上映前，基于一条预告片而混剪制作的京东贴片广告。</p>
-                </li>
-                <li><img src="/images/display2.jpg" alt=""></li>
-            </ul>
-			{{/with}}
-        </div>
-        <div class="team">
-			{{#with team}}
-            <h1>{{title}}</h1>
-            <p>{{{subtitle}}}</p>
-            <ul class="team-member">
-				{{#each members}}
-					{{#if (equal @index 3)}}
-						<li></li>
-					{{else}}
-						<li>
-							<div class="avator avator1"></div>
-							<div class="info">
-								<p class="name">{{name}}</p>
-								<p class="title">{{title}}</p>
-								<p>{{text}}</p>
-							</div>
-						</li>
-					{{/if}}
-				{{/each}}
-            </ul>
+	        <div class="content1">
+	            <ul>
+	                <li style="background-color: #FFD102;color:#000;">
+	                    <img src="/images/section2.jpg" alt="">
+	                    <p class="title">{{content1.0.title}}</p>
+	                    <p>{{content1.0.text}}</p>
+	                </li>
+	                <li style="background-color: #F5F5F5;">
+	                    <img src="/images/section3.jpg" alt="">
+						<p class="title">{{content1.1.title}}</p>
+	                    <p>{{content1.1.text}}</p>
+	                </li>
+	                <li style="background-color: #25CE9E;">
+	                    <img src="/images/section4.jpg" alt="">
+						<p class="title">{{content1.2.title}}</p>
+	                    <p>{{content1.2.text}}</p>
+	                </li>
+	                <li style="background-color: #4088DA;color:#fff;">
+	                    <img src="/images/section5.jpg" alt="">
+						<p class="title">{{content1.3.title}}</p>
+	                    <p>{{{content1.3.text}}}</p>
+	                </li>
+	            </ul>
+	        </div>
+	        <div class="display">
+				{{#with display}}
+	            <h1>{{title}}</h1>
+	            <ul class="content">
+	                <li><img src="/images/display1.jpg" alt=""></li>
+	                <li style="background: #4088DA">
+	                    <p class="title">京东 JD.COM</p>
+	                    <p class="subtitle">影院贴片广告</p>
+	                    <p>在美国队长3上映前，基于一条预告片而混剪制作的京东贴片广告。</p>
+	                </li>
+	                <li><img src="/images/display2.jpg" alt=""></li>
+	            </ul>
+				{{/with}}
+	        </div>
+	        <div class="team">
+				{{#with team}}
+	            <h1>{{title}}</h1>
+	            <p>{{{subtitle}}}</p>
+	            <ul class="team-member">
+					{{#each members}}
+						{{#if (equal @index 3)}}
+							<li></li>
+						{{else}}
+							<li>
+								<div class="avator avator{{#if (equal @index 1)}}2{{else if (equal @index 2)}}3{{else}}1{{/if}}"></div>
+								<div class="info">
+									<p class="name">{{name}}</p>
+									<p class="title">{{title}}</p>
+									<p>{{text}}</p>
+								</div>
+							</li>
+						{{/if}}
+					{{/each}}
+	            </ul>
+				{{/with}}
+			</div>
 			{{/with}}
 		</div>
-		{{/with}}
 	</div>
     {{> footer}}
 </body>

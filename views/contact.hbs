@@ -11,59 +11,65 @@
     {{> nav current ='3' menu=menu}}
     <div class="wrap">
         <div class="content">
-            <ul class="menu">
-                <li class="menu1"><a class="active" href="javascript:void(0)">我要做视频</a></li>
-                <li class="menu2"><a href="javascript:void(0)">商业合作</a></li>
-            </ul>
-            <div class="form" id="form1">
-                <p>通过信息提供，能够帮助我们更了解您的需求，<br>从而更好的为您提供咨询服务</p>
-                <form id="contact">
-                    <div class="form-row">
-                        <input type="text" placeholder="姓名" class="j-name"></input>
-                    </div>
-                    <div class="form-row">
-                        <input type="tel" placeholder="电子邮箱"  class="j-email"></input>
-                    </div>
-                    <div class="form-row">
-                        <textarea  placeholder="请描述下您的具体业务" class="j-describe"></textarea>
-                    </div>
-                    <div class="form-row">
-                        <textarea  placeholder="请形容下您的商业远期愿景，和当前的主要目标消费群体，谁是您的客户？他们的年龄、性别、性格特征、教育背景分别都是什么？" class="j-self_desc"></textarea>
-                    </div>
-                    <div class="form-row">
-                        <textarea  placeholder="对于这个视频，您有任何的期待吗？是否有任何其它的创意视频广告启发了您，如有，请将链接一并放在这里。" class="j-feedback1"></textarea>
-                    </div>
-                    <div class="form-row">
-                        <textarea  placeholder="有哪些元素或者内容，您不喜欢出现在视频中？" class="j-feedback2"></textarea>
-                    </div>
-                    <div class="form-row inline-form-row">
-                        <input type="text" placeholder="项目截止日期   月/日/年" class="j-project_end_time datepicker-here" data-language='zh'></input>
-                        <input type="number" placeholder="您的预算？   ¥ 0.00"  class="j-project_budget"></input>
-                    </div>
-                     <div class="form-row">
-                        <textarea  placeholder="其它任何您想补充的信息" class="j-other"></textarea>
-                    </div>
-                    <a class="submit-btn btn j-sendbtn1" href="javascript:void(0)">发送</a>
-                </form>
-            </div>
-            <div class="form" id="form2">
-                <p>对于合作，我们始终保持着完全开放的心态，<br>随时恭候您的来信</p>
-                <form id="contact">
-                    <div class="form-row">
-                        <input type="text" placeholder="姓名" class="j-name"></input>
-                    </div>
-                    <div class="form-row">
-                        <input type="tel" placeholder="电子邮箱"  class="j-email"></input>
-                    </div>
-                    <div class="form-row">
-                        <textarea  placeholder="请描述下您的主营业务" class="j-describe"></textarea>
-                    </div>
-                    <div class="form-row">
-                        <textarea  placeholder="请留下您想要传递给我们的信息" class="j-other"></textarea>
-                    </div>
-                    <a class="submit-btn btn  j-sendbtn2" href="javascript:void(0)">发送</a>
-                </form>
-            </div>
+            {{#with contact}}
+                <ul class="menu">
+                    <li class="menu1"><a class="active" href="javascript:void(0)">{{tabs.[0]}}</a></li>
+                    <li class="menu2"><a href="javascript:void(0)">{{tabs.[1]}}</a></li>
+                </ul>
+                {{#with form1}}
+                <div class="form" id="form1">
+                    <p>{{{title}}}</p>
+                    <form id="contact">
+                        <div class="form-row">
+                            <input type="text" placeholder="{{form.0.text}}" class="j-name"></input>
+                        </div>
+                        <div class="form-row">
+                            <input type="tel" placeholder="{{form.1.text}}"  class="j-email"></input>
+                        </div>
+                        <div class="form-row">
+                            <textarea  placeholder="{{form.2.text}}" class="j-describe"></textarea>
+                        </div>
+                        <div class="form-row">
+                            <textarea  placeholder="{{form.3.text}}" class="j-self_desc"></textarea>
+                        </div>
+                        <div class="form-row">
+                            <textarea  placeholder="{{form.4.text}}" class="j-feedback1"></textarea>
+                        </div>
+                        <div class="form-row">
+                            <textarea  placeholder="{{form.5.text}}" class="j-feedback2"></textarea>
+                        </div>
+                        <div class="form-row inline-form-row">
+                            <input type="text" placeholder="{{form.6.text}}" class="j-project_end_time datepicker-here" data-language='zh'></input>
+                            <input type="number" placeholder="{{form.6.extra}}"  class="j-project_budget"></input>
+                        </div>
+                         <div class="form-row">
+                            <textarea  placeholder="{{form.7.text}}" class="j-other"></textarea>
+                        </div>
+                        <a class="submit-btn btn j-sendbtn1" href="javascript:void(0)">{{btn}}</a>
+                    </form>
+                </div>
+                {{/with}}
+                {{#with form2}}
+                <div class="form" id="form2">
+                    <p>{{{title}}}</p>
+                    <form id="contact">
+                        <div class="form-row">
+                            <input type="text" placeholder="{{form.0.text}}" class="j-name"></input>
+                        </div>
+                        <div class="form-row">
+                            <input type="tel" placeholder="{{form.1.text}}"  class="j-email"></input>
+                        </div>
+                        <div class="form-row">
+                            <textarea  placeholder="{{form.2.text}}" class="j-describe"></textarea>
+                        </div>
+                        <div class="form-row">
+                            <textarea  placeholder="{{form.3.text}}" class="j-other"></textarea>
+                        </div>
+                        <a class="submit-btn btn  j-sendbtn2" href="javascript:void(0)">发送</a>
+                    </form>
+                </div>
+                {{/with}}
+            {{/with}}
         </div>
     </div>
     {{> footer}}

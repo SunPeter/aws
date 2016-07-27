@@ -14,7 +14,7 @@
       "text": "CHINESE",
       "url": "/"
   }],
-  "page1": {
+  "index": {
       "slider": [{
           "title": "We provide comprehensive video production services",
           "subtitle": "“We are probably the worst ad-agency ever”"
@@ -76,5 +76,53 @@
               "text": "Finance-Former auditor of Deloitte for years, then joined Qihoo 360 as role of financial manager. "
           }]
       }
+  },
+  "contact": {
+      "tabs": ["I want to make a video", "I am looking for a partnership"],
+      "form1": {
+          "title": "Let’s collaborate",
+          "form": [{
+              "text": "Full Name"
+          }, {
+              "text": "Email address"
+          }, {
+              "text": "Describe your business"
+          }, {
+              "text": "Describe your goals and targets, who are your clients, age, gender, personality, education"
+          }, {
+              "text": "Tell us a bit more about your expecations, what inspires you? Links are accepted."
+          }, {
+              "text": "Describe what you dislike and would rather not see in the video"
+          }, {
+              "text": "Deadline   MM/DD/YYYY",
+              "extra": "Budget   $0.00"
+          }, {
+              "text": "Additional comments"
+          }],
+          "btn": "SEND"
+      },
+      "form2": {
+          "title": "Let’s partner up",
+          "form": [{
+              "text": "Full Name"
+          }, {
+              "text": "Email address"
+          }, {
+              "text": "Describe your business"
+          }],
+          "btn": "SEND"
+      }
+  },
+  "join": {
+      "title": "Join Us",
+      "subtitle": "Teamwork makes dreams work.",
+      "btns": ["Email", "SEND"],
+      "form": [{
+          "text": "Full Name"
+      }, {
+          "text": "Email address"
+      }, {
+          "text": "Message…"
+      }]
   }
 }

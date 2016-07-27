@@ -76,6 +76,7 @@ form {
 .nav ul li.logo {
   width: 24%;
   background: url("../images/logo.png") center no-repeat;
+  background-size: 50%;
 }
 .nav ul li.logo a {
   display: block;
@@ -97,7 +98,8 @@ form {
   width: 550px;
   padding: 34px 0 34px 450px;
   overflow: hidden;
-  background: url("../images/logo1.png") 80px center no-repeat;
+  background: url("../images/logo.png") 80px center no-repeat;
+  background-size: 10%;
   border-bottom: 1px solid rgba(255, 255, 255, 0.16);
 }
 .footer .top ul {
@@ -130,7 +132,11 @@ body {
   background: #EEEEEE;
 }
 
-.wrap {
+.wrap-top {
+  background: #F5F5F5;
+}
+
+.wrap-bottom {
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -176,8 +182,11 @@ body {
   background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAbCAYAAACjkdXHAAAABGdBTUEAALGPC/xhBQAAAodJREFUOBGVk0tPE1EUx8+dGWboA6IrE1wZIl00pSW4cSW04AMNRLE1okCqbvwWLgzfwI0LKySgtjE2VNAYE3Ut2GloiVRMmzRUq0N8lCa0oNdzmgypffcmk5u59/z+53/vuQcs6uz1ng++OTf3i9DiEDj/O8SBT0bCufkB/kZqhRfsDtNNYGwBBa6k1eRCKwKMMpFlykwCAOxpZ5/t6io7sdfIRRGmIMq4pSYeAYfLjLFgh8PmaSRwAOsC6XDyCTq4hP+LsmJ2x6yeAu1VG//BFNDPV9qy6lqAcz4GDJ7Lsnm8loBQrkhW0bIbzx7CI1zYK+Senfu0rJTH0X8FTIskICsmOvsSOhj5nM0EBxK+dtorHVVhCiCr3eYj4wzYS7yDs1s/YfFkym9oCqagF8dH8l2H4SK+g1fA+fD291yoVKBmZj3D22Pe3aOHYIwxeI0OXNvazlJ/OmSk/Yrb1qHymTISyDkMIvXOIEjnm4ZJrDcyZ9r9sx/nAF14mcsNbZc6yPP9GQLR8G9BFO42lRnLxXpU3z2s+23M+AMFz8T7vO8btiCB2PP3EbyFZduWmDC87pgOk6O68B3OBYv68AEKTGO5vomC6Fq3T0X1o9S0TW2qqrlZrO81zPgF0zjjvd6POkhzVZjaM60m5rEsHgxJyYrkjFknN0vBqnCxq8Jrj6kt8XKSTBCdG/apRDlYAVtjfrmQ3wngxih+m0obOKO2G6lqIK0d1JnajtoP10bxKW4IRsOpeiDBxTPT09O0XBAv5zTeakyRFFfUNpGhgHqD0SPPftVCeEYnZoyAsX0obpnQ6kH6npDNaIEiCLCiiMpgsyAJSFjDGc5A6ug0eVa7Pb901Wbmf8B5CGFXQnmcAAAAAElFTkSuQmCC');
 }
 
-.banner img {
-  width: 100%;
+.banner {
+  margin: 0 auto;
+  height: 306px;
+  background: url("../images/section1.jpg") center repeat-x;
+  background-size: auto 306px;
 }
 
 .consume-btn {
@@ -204,13 +213,14 @@ body {
 }
 .content .intro {
   width: 560px;
-  padding-right: 440px;
+  padding: 0 440 40px 0;
   height: 260px;
   border-bottom: 1px solid #EEEEEE;
   background: url("../images/intro.jpg") right top no-repeat;
 }
 .content .intro p {
   font-size: 24px;
+  line-height: 30px;
   color: #000;
 }
 .content .intro p.p2 {
@@ -362,6 +372,7 @@ body {
   background-image: url("../images/avator2.png");
 }
 .team .team-member li .avator3 {
+  background-image: url("../images/avator1.png");
   transform: rotate3d(0, 1, 0, 180deg);
 }
 .team .team-member li .info p {

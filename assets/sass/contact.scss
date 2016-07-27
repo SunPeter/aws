@@ -25,13 +25,13 @@ body {
         background: #B9B9B9;
         border-top-left-radius: 6px;
         border-top-right-radius: 6px;
-        padding-left: 150px;
+        padding-left: 180px;
         li {
             overflow: hidden;
             &.menu1 {
                 float: left;
-                margin-left: -150px;
-                width: 150px;
+                margin-left: -180px;
+                width: 180px;
                 border-top-right-radius: 6px;
             }
             a {

@@ -76,6 +76,7 @@ form {
 .nav ul li.logo {
   width: 24%;
   background: url("../images/logo.png") center no-repeat;
+  background-size: 50%;
 }
 .nav ul li.logo a {
   display: block;
@@ -97,7 +98,8 @@ form {
   width: 550px;
   padding: 34px 0 34px 450px;
   overflow: hidden;
-  background: url("../images/logo1.png") 80px center no-repeat;
+  background: url("../images/logo.png") 80px center no-repeat;
+  background-size: 10%;
   border-bottom: 1px solid rgba(255, 255, 255, 0.16);
 }
 .footer .top ul {
@@ -153,15 +155,15 @@ body {
   background: #B9B9B9;
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
-  padding-left: 150px;
+  padding-left: 180px;
 }
 .content .menu li {
   overflow: hidden;
 }
 .content .menu li.menu1 {
   float: left;
-  margin-left: -150px;
-  width: 150px;
+  margin-left: -180px;
+  width: 180px;
   border-top-right-radius: 6px;
 }
 .content .menu li a {
