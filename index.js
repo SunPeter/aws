@@ -9,6 +9,7 @@ var router = new Router()
 var _static = require('koa-static')
 var request = require('koa-request')
 var koaBody   = require('koa-body')
+var cms = require("./service/cms");
 app.use(_static('./assets'));
 app.use(koaBody({formidable:{uploadDir: __dirname}}))
 locale(app)
@@ -38,14 +39,18 @@ app.use(login);
 
 app.use(router.dispatcher())
 
+//微信活动页
 router.route(['/wx/index','/wx/index1', '/wx/index2', '/wx/index3']).get(function* (next) {
     var signature = require("./service/signature")(app, this);
     yield this.render("wx_index", signature);
 });
 
+
 router.route(['/','/index']).get(function* (next) {
     var ua = this.req.headers['user-agent'];
     var locals = this.i18n.locales[this.i18n.locale];
+    var cmsRes = yield cms();
+    locals.index.cmsData = JSON.parse(JSON.parse(cmsRes.body));
     if (/(iPhone|Android|MicroMessenger)/.test(ua)) {
         yield this.render("index_mobile",locals);
     } else {

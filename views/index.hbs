@@ -65,18 +65,17 @@
 	            </ul>
 	        </div>
 	        <div class="display">
-				{{#with display}}
-	            <h1>{{title}}</h1>
-	            <ul class="content">
-	                <li><img src="/images/display1.jpg" alt=""></li>
-	                <li style="background: #4088DA">
-	                    <p class="title">京东 JD.COM</p>
-	                    <p class="subtitle">影院贴片广告</p>
-	                    <p>在美国队长3上映前，基于一条预告片而混剪制作的京东贴片广告。</p>
+	            <h1>{{display.title}}</h1>
+	            <ul class="content" id="video">
+					{{#each cmsData}}
+					<li data-video={{story_video_link}} data-title={{story_title}}>
+	                    <p class="title">{{story_name}}</p>
+	                    <p class="subtitle">{{story_title}}</p>
+	                    <p>{{story_context}}</p>
+						<img src="http://idea-admin.ideaology.cn/file/{{story_logo}}" alt="">
 	                </li>
-	                <li><img src="/images/display2.jpg" alt=""></li>
+					{{/each}}
 	            </ul>
-				{{/with}}
 	        </div>
 	        <div class="team">
 				{{#with team}}
@@ -104,6 +103,15 @@
 		</div>
 	</div>
     {{> footer}}
+	<div id="modal">
+		<div class="modal-hd">
+	        <h3 class="title"></h3>
+	        <a class="close-btn" href="javascript: void(0);">X</a>
+	    </div>
+		<div class="modal-bd">
+			<iframe src="" width="750" height="422" frameborder="0" allowfullscreen id="video_iframe"></iframe>
+		</div>
+	</div>
 </body>
 <script src="/vendor/jquery.min.js"></script>
 <script src="/vendor/jquery.slides.min.js"></script>
