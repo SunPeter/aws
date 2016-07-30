@@ -186,6 +186,7 @@ body {
   margin: 0 auto;
   height: 360px;
   background: url("../images/section1.svg") center no-repeat;
+  background-size: contain;
 }
 
 .consume-btn {
