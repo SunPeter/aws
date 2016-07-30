@@ -184,9 +184,8 @@ body {
 
 .banner {
   margin: 0 auto;
-  height: 306px;
-  background: url("../images/section1.jpg") center repeat-x;
-  background-size: auto 306px;
+  height: 360px;
+  background: url("../images/section1.svg") center no-repeat;
 }
 
 .consume-btn {
@@ -283,6 +282,19 @@ body {
   line-height: 40px;
 }
 
+@media (max-height: 700px) {
+  .content1 ul li {
+    padding-top: 36px;
+    height: 300px;
+  }
+  .content1 ul li img {
+    height: 180px;
+  }
+  .content1 ul li p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
 .display {
   background: #fff;
   padding-top: 45px;
