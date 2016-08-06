@@ -134,13 +134,16 @@
 	})
 	$("#video li").css("height", screen_width / 2 * 0.63 + "px");
 	$("#video li").on("click", function(e){
+		if (player.css("display") === "block") {
+			return;
+		}
 		e.stopPropagation();
         var uri = $(this).attr("data-video"), title = $(this).attr("data-title");
-		player.attr("src", uri).css("display", "block");
+		player.find("iframe").attr("src", uri);
+		player.css("display", "block");
     }, false);
-	$("#wrap").on("click", function (e) {
-		if (player.css("display") === "block") {
-			player.attr("src", "").css("display", "none");
-		}
+	player.find("a").on("click", function (e) {
+		e.stopPropagation();
+		player.attr("src", "").css("display", "none");
 	}, false)
 })

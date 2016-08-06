@@ -457,3 +457,25 @@ input[type="date"]:after {
   height: 3.2rem;
   transform: translate(-50%, -50%);
 }
+#video_iframe iframe {
+  width: 6.4rem;
+  height: 3.2rem;
+  background: #000;
+}
+#video_iframe a {
+  color: #fff;
+  background-color: #e53935;
+  font-size: .16rem;
+  border-radius: .15rem;
+  position: absolute;
+  top: -0.15rem;
+  right: -0.15rem;
+  width: .3rem;
+  height: .3rem;
+  line-height: .3rem;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  z-index: 10;
+}
