@@ -213,8 +213,16 @@ nav {
 		float: left;
 		width: 50%;
 		text-align: center;
-		box-shadow: .02rem 0 0 #F5F5F5;
-		text-align: center;
+		border-bottom: 1px solid #999;
+		&:nth-child(odd) {
+			border-right: 1px solid #999;
+			margin-right: -1px;
+		}
+		.helper {
+		    display: inline-block;
+		    height: 100%;
+		    vertical-align: middle;
+		}
 		img {
 			max-width: 80%;
 			max-height: 80%;
