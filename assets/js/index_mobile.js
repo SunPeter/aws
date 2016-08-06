@@ -127,14 +127,20 @@
 		}
 		$.post("/api/contactus", data, function (res) {
 			alert(res.msg);
-	        if(200==res.status){
+	        if(200 == res.status){
 	            location.reload();
 	        }
 		})
 	})
 	$("#video li").css("height", screen_width / 2 * 0.63 + "px");
-	$("#video li").click(function(){
+	$("#video li").on("click", function(e){
+		e.stopPropagation();
         var uri = $(this).attr("data-video"), title = $(this).attr("data-title");
 		player.attr("src", uri).css("display", "block");
-    });
+    }, false);
+	$("#wrap").on("click", function (e) {
+		if (player.css("display") === "block") {
+			player.attr("src", "").css("display", "none");
+		}
+	}, false)
 })
