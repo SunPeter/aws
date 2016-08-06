@@ -194,8 +194,7 @@ nav {
 }
 .cooperate {
 	padding: .2rem 0 .6rem 0;
-	margin-bottom: 1rem;
-	background: #fff;
+	background: #F5F5F5;
 	p {
 		font-size: .3rem;
 		text-align: center;
@@ -213,19 +212,12 @@ nav {
 	li {
 		float: left;
 		width: 50%;
-		height: 1.58rem;
-		padding-bottom: 1rem;
 		text-align: center;
-		&.run {
-			box-shadow: .02rem 0 0 #F5F5F5;
-			background: url("../images/m/company1.png") center center no-repeat;
-			background-size: 50%;
-		}
-		&.jd {
-			background: url("../images/m/company2.png") center center no-repeat;
-			background-size: 50%;
-		}
+		box-shadow: .02rem 0 0 #F5F5F5;
+		text-align: center;
 		img {
+			max-width: 80%;
+			max-height: 80%;
 			vertical-align: middle;
 		}
 	}
@@ -414,4 +406,13 @@ footer {
 }
 input[type="date"]:after {
   content: attr(placeholder)
+}
+#video_iframe {
+	display: none;
+	position: fixed;
+	left:50%;
+	top:50%;
+	width:6.4rem;;
+	height: 3.2rem;
+	transform: translate(-50%, -50%);
 }

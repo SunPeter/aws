@@ -28,6 +28,7 @@
 	<link rel="stylesheet" href="/css/index_mobile.css" charset="utf-8">
 </head>
 <body>
+    {{#with index}}
     <div class="one" id="wrap">
 		<nav>
             <div id="nav_wrap" class="nav-wrap">
@@ -90,12 +91,13 @@
     		</div>
             <div class="cooperate">
                 <p>案例展示</p>
-                <ul>
-                    <li class="run">
-                    </li>
-                    <li class="jd">
-                    </li>
-                </ul>
+                <ul class="content" id="video">
+					{{#each cmsData}}
+					<li data-video={{story_video_link}} data-title={{story_title}}>
+						<img src="http://idea-admin.ideaology.cn/file/{{story_logo}}" alt="">
+	                </li>
+					{{/each}}
+	            </ul>
             </div>
         </div>
         <div class="step2">
@@ -186,6 +188,8 @@
             </div>
         </footer>
 	</div>
+    <iframe frameborder="0" allowfullscreen id="video_iframe"></iframe>
+    {{/with}}
 </body>
 <script src="/vendor/zepto.min.js"></script>
 <script src="/vendor/islider.min.js"></script>

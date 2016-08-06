@@ -1,5 +1,5 @@
 ;$(function() {
-	var wrap = $("#wrap");
+	var wrap = $("#wrap"), player = $("#video_iframe"), screen_width = document.documentElement.clientWidth;
 	window.onhashchange = function () {
 		var hash = location.hash.match(/#!(.+)$/);
 		var menu = hash && hash[1] || "";
@@ -132,4 +132,9 @@
 	        }
 		})
 	})
+	$("#video li").css("height", screen_width / 2 * 0.63 + "px");
+	$("#video li").click(function(){
+        var uri = $(this).attr("data-video"), title = $(this).attr("data-title");
+		player.attr("src", uri).css("display", "block");
+    });
 })
