@@ -144,10 +144,8 @@
     }, false);
 	player.find("a").on("click", function (e) {
 		e.stopPropagation();
-		player.find("iframe").attr("src", "");
-		player.contents().find('video').each(function (){
-            this.pause();
-        });
+		player.find("iframe").remove();
+		player.append('<iframe frameborder="0" allowfullscreen></iframe>');
 		player.css("display", "none");
 	}, false)
 })
