@@ -144,6 +144,8 @@
     }, false);
 	player.find("a").on("click", function (e) {
 		e.stopPropagation();
-		player.attr("src", "").css("display", "none");
+		player.find("iframe").attr("src", "")
+		player.css("display", "none");
+		player.
 	}, false)
 })
