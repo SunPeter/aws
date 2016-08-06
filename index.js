@@ -51,6 +51,9 @@ router.route(['/','/index']).get(function* (next) {
     var locals = this.i18n.locales[this.i18n.locale];
     var cmsRes = yield cms();
     locals.index.cmsData = JSON.parse(JSON.parse(cmsRes.body));
+    locals.index.cmsData.forEach(item => {
+        item.story_video_link = item.story_video_link.replace(/&amp;/g, "&")
+    });
     if (/(iPhone|Android|MicroMessenger)/.test(ua)) {
         yield this.render("index_mobile",locals);
     } else {
